@@ -1,8 +1,7 @@
-
 function checkSeatStatus1() {
-    return function (){  
-    }
+
 }
+
 function checkSeatStatus(row, number) {
     if(typeof row !== 'string') throw new TypeError('First parameter is not a string');
     if(typeof number !== 'number') throw new TypeError('Second parameter is not a number');
@@ -17,7 +16,7 @@ function checkSeatStatus(row, number) {
     const seat = layoutRows[number];
     return seat;
   }
-
+  
   const layout = [
     [{type: 'VIP', booked: false}, {type: 'VIP', booked: true}, {type: 'VIP', booked: true}, {type: 'VIP', booked: false}],
     [{type: 'NORMAL', booked: false}, {type: 'VIP', booked: true}, {type: 'VIP', booked: false}, {type: 'NORMAL', booked: false}],
@@ -38,8 +37,8 @@ function getRowNumber(letter) {
   }
 
 module.exports = {
-  checkSeatStatus,
   checkSeatStatus1,
+  checkSeatStatus,
   getRowNumber,
   book
 }

@@ -1,9 +1,10 @@
 
-const { checkSeatStatus,checkSeatStatus1,getRowNumber,book } = require('../homework');
+
+const { checkSeatStatus,checkSeatStatus1, getRowNumber,book } = require('../homework');
 
   describe('checkSeatStatus', () => {
     it('checkSeatStatus is a function', () => {
-        expect(typeof checkSeatStatus1()).toBe('function');
+        expect(typeof checkSeatStatus1).toBe('function');
       });
     it('should throw a TypeError if first parameter is not a string', () => {
         expect(() => checkSeatStatus(4)).toThrow(new TypeError('First parameter is not a string'));
